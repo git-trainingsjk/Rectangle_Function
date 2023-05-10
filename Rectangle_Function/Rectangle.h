@@ -13,6 +13,7 @@ public:
 	void setLength(double Length);
 	void setWidth(double Width);
 	double area() const;
+	double perimeter() const;
 	void print_Rectangle_details() const;
 
 private:

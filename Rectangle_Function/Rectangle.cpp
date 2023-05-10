@@ -4,8 +4,8 @@ using namespace std;
 
 Rectangle::Rectangle()
 {
-	Length = 2;
-	Width = 2;
+	Length = 2.0;
+	Width = 2.0;
 }
 
 Rectangle::Rectangle(double Length, double Width)
@@ -34,12 +34,17 @@ void Rectangle::setWidth(double Width)
 	this->Width = Width;
 }
 
+double Rectangle::perimeter() const
+{
+	return((2 * Length) + (2 * Width));
+}
 double Rectangle::area() const
 {
 	return(Length * Width);
 }
 
+
 void Rectangle::print_Rectangle_details() const
 {
-	cout << "The box has a length = " << Length << " & width = " << Width << " Area = " << area() <<endl <<endl;
+	cout << "The box has a length = " << Length << " & width = " << Width << " Area = " << area() << " and Perimeter = "<< perimeter() <<endl << endl;
 }
